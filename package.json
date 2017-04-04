@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"vue-resource",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "vue-resource",
+    "description": "api documentation for [vue-resource (v1.2.1)](https://github.com/pagekit/vue-resource#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-vue-resource.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-resource) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-resource.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-resource)",
     "devDependencies": {
-        "vue-resource": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
-        "utility2": "kaizhu256/node-utility2#alpha"
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "vue-resource": "*"
     },
-    "name":"npmdoc-vue-resource",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-vue-resource",
+    "keywords": [
+        "documentation",
+        "vue-resource"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_vue_resource.js",
+    "name": "npmdoc-vue-resource",
+    "nameAlias": "npmdoc_vue_resource",
+    "nameOriginal": "npmdoc-vue-resource",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-vue-resource"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
