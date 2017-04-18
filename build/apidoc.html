@@ -51,7 +51,7 @@
 
         href="https://github.com/pagekit/vue-resource#readme"
 
-    >vue-resource (v1.2.1)</a>
+    >vue-resource (v1.3.1)</a>
 </h1>
 <h4>The HTTP client for Vue.js</h4>
 <div class="apidocSectionDiv"><a
@@ -61,12 +61,131 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.vue-resource">module vue-resource</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-resource.vue-resource">
+            function <span class="apidocSignatureSpan"></span>vue-resource
+            <span class="apidocSignatureSpan">(Vue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-resource.toString">
+            function <span class="apidocSignatureSpan">vue-resource.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vue-resource.toString">module vue-resource.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-resource.toString.toString">
+            function <span class="apidocSignatureSpan">vue-resource.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.vue-resource" id="apidoc.module.vue-resource">module vue-resource</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vue-resource.vue-resource" id="apidoc.element.vue-resource.vue-resource">
+        function <span class="apidocSignatureSpan"></span>vue-resource
+        <span class="apidocSignatureSpan">(Vue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function plugin(Vue) {
+
+    if (plugin.installed) {
+        return;
+    }
+
+    Util(Vue);
+
+    Vue.url = Url;
+    Vue.http = Http;
+    Vue.resource = Resource;
+    Vue.Promise = PromiseObj;
+
+    Object.defineProperties(Vue.prototype, {
+
+        $url: {
+            get: function get() {
+                return options(Vue.url, this, this.$options.url);
+            }
+        },
+
+        $http: {
+            get: function get() {
+                return options(Vue.http, this, this.$options.http);
+            }
+        },
+
+        $resource: {
+            get: function get() {
+                return Vue.resource.bind(this);
+            }
+        },
+
+        $promise: {
+            get: function get() {
+                var this$1 = this;
+
+                return function (executor) { return new Vue.Promise(executor, this$1); };
+            }
+        }
+
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-resource.toString" id="apidoc.element.vue-resource.toString">
+        function <span class="apidocSignatureSpan">vue-resource.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vue-resource.toString" id="apidoc.module.vue-resource.toString">module vue-resource.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vue-resource.toString.toString" id="apidoc.element.vue-resource.toString.toString">
+        function <span class="apidocSignatureSpan">vue-resource.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
