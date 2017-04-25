@@ -1,6 +1,6 @@
 # npmdoc-vue-resource
 
-#### api documentation for  [vue-resource (v1.3.1)](https://github.com/pagekit/vue-resource#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-resource.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-resource) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-resource.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-resource)
+#### basic api documentation for  [vue-resource (v1.3.1)](https://github.com/pagekit/vue-resource#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-resource.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-resource) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-resource.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-resource)
 
 #### The HTTP client for Vue.js
 
@@ -80,7 +80,8 @@
         "test": "jest --env=node",
         "webpack": "webpack --config test/webpack.config.js"
     },
-    "version": "1.3.1"
+    "version": "1.3.1",
+    "bin": {}
 }
 ```
 
